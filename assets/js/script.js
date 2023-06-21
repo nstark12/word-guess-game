@@ -1,7 +1,3 @@
-// vars
-
-// select dom elements
-
 var startButton = document.querySelector(".start-button");
 var resetButton = document.querySelector(".reset-button");
 var timerEl = document.querySelector(".timer");
@@ -61,6 +57,8 @@ function startRound() {
 
   // When start is clicked, startRound function runs
   startButton.addEventListener("click", startRound);
+
+  document.body.addEventListener("keydown", onKeydown);
 
     // start - startRound()
     // reset
