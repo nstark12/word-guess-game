@@ -14,13 +14,27 @@ var words = ["jellyfish", "pancakes", "callback", "bacon", "porcupine"];
 
 var userGuesses = [] // list of letters guessed by user
 var answer // will be assigned when start button is clicked
-  
 
-  function startRound() {
+function getRandomWord() {
+  var randomIdx = Math.floor(Math.random() * words.length);
+    answer = words[randomIdx];
+}
+
+function renderWord() {
+  var blanks = "";
+    for (var i = 0; i < randomWord.length; i++) {
+      blanks += "_";
+    }
+    wordBlanksEl.innerText = blanks.split('').join(' ');
+}
+
+function startRound() {
+    getRandomWord();
+    renderWord();
     // start timer
-    // pick a random word
-    // set word-blanks to have _'s
-  }
+    
+    
+}
 
   function onKeydown(event) {
     // check if letter pressed is in the answer string
